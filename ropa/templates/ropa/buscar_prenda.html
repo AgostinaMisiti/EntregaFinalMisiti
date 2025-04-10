@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Prenda</title>
+</head>
+<body>
+    <h1>Buscar Prenda</h1>
+
+    <form method="get">
+        <label for="q">Buscar por nombre:</label>
+        <input type="text" name="q" id="q" value="{{ query }}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if resultados %}
+        <h2>Resultados:</h2>
+        <ul>
+            {% for prenda in resultados %}
+                <li>{{ prenda.nombre }} - {{ prenda.talle }} - ${{ prenda.precio }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+
+    <a href="{% url 'inicio' %}">Volver a la lista de prendas</a>
+</body>
+</html>

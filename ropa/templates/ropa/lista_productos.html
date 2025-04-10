@@ -1,0 +1,19 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Lista de Productos</h1>
+
+  {% if prendas %}
+    <ul>
+      {% for prenda in prendas %}
+        <li>
+          <strong>Nombre:</strong> {{ prenda.nombre }} <br>
+          <strong>Talle:</strong> {{ prenda.talle }} <br>
+          <strong>Precio:</strong> ${{ prenda.precio }} <br>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No hay productos disponibles.</p>
+  {% endif %}
+{% endblock %}
