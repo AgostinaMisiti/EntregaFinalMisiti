@@ -25,7 +25,7 @@ Este proyecto es una aplicación web desarrollada con Django, que permite gestio
 1. **Clona el repositorio**:
 
    ```bash
-   git clone https://github.com/tuusuario/tu-repositorio.git
+   git clone https://github.com/AgostinaMisiti/EntregaFinalMisiti.git
 
 2. **Crear un entorno virtual**:
 python -m venv venv
